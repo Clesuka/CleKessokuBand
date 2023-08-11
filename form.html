@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="layout1/form.css">
+</head>
+
+<body>
+
+    <form name="form" action="login.php" method="post">
+        <div class="imgcontainer">
+            <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+        </div>
+
+        <div class="container">
+
+            <!-- Login Form -->
+            <!-- ID Form -->
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <!-- Password Form -->
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" id="myInput">
+            <p id="text">WARNING! Caps lock is ON.</p>
+
+            <!-- An element to toggle between password visibility -->
+            <input type="checkbox" onclick="myFunction()">Show Password
+            <button type="submit" onclick="loginCheck()">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+
+    <script>
+        // Password toggle visibility
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+
+        // Get the input field
+        var input = document.getElementById("myInput");
+
+        // Get the warning text
+        var text = document.getElementById("text");
+
+        // When the user presses any key on the keyboard, run the function
+        input.addEventListener("keyup", function (event) {
+
+            // If "caps lock" is pressed, display the warning text
+            if (event.getModifierState("CapsLock")) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        });
+
+        function loginCheck() {
+
+            // Check id and password login
+            var username = document.forms["form"]["username"].value;
+            var password = document.forms["form"]["password"].value;
+
+            var keyUsername = "clesuka";
+            var keyPassword = "12345678";
+
+            if (username == keyUsername && password == keyPassword) {
+                alert("Login Success");
+                window.location.href = "http://127.0.0.1:5500/test-site/index.html"; // Redirect to index.html
+            } else {
+                alert("Invalid username or password");
+                window.location.href = "form.html"; // Redirect to form.html
+            }
+        }
+    </script>
+
+</body>
+
+</html>

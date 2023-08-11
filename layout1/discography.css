@@ -1,0 +1,72 @@
+body {
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio (9 / 16 * 100) */
+}
+
+.left-side,
+.right-side {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-side {
+  left: 0;
+  width: 50%;
+  /* Divide into two equal sides */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Transparent black background */
+  color: white;
+  /* Text color for left side */
+}
+
+.right-side {
+  padding-top: 50px;
+  display: inline-block;
+  right: 0;
+  /* padding-right: 50px; */
+  /* margin-left:500px; */
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Transparent black background */
+  color: white;
+  /* Text color for right side */
+  text-align: justify;
+}
+
+.left-side img {
+  max-width: 50rem;
+  /* Resize the image to fit the container width */
+  height: auto;
+  /* Maintain aspect ratio */
+  display: block;
+  /* Center the image horizontally */
+  margin: 0 auto;
+  /* Center the image horizontally */
+}
+
+.right-side p {
+  font-size: 1.25rem;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.right-side h2 {
+  padding-left: 50px;
+}
+
+.play-button {
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+  cursor: pointer;
+}

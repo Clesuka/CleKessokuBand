@@ -178,6 +178,8 @@ footer {
     text-align: center;
     font-size: 12px;
     color: black;
+    position: relative;
+    z-index: 999 !important;
 }
 
 .footer-logo {
