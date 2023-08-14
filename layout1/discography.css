@@ -44,6 +44,7 @@ body {
 }
 
 .left-side img {
+  padding-top: 85px;
   max-width: 50rem;
   /* Resize the image to fit the container width */
   height: auto;
@@ -66,7 +67,7 @@ body {
 
 .play-button {
   position: absolute;
-  bottom: 100px;
+  bottom: 200px;
   right: 50px;
   cursor: pointer;
 }
